@@ -4,10 +4,15 @@ import StarterKit from "@tiptap/starter-kit"
 const Main = () => {
     const editor = useEditor({
         extensions: [StarterKit],
-        content: '<p>Hello World</p>'
+        content: '<p>Hello World</p>',
+        editorProps:{
+            attributes: {
+                class: 'outline-none'
+            }
+        }
     })
   return (
-    <EditorContent className="max-w-[700px] mx-auto pt-16" editor={editor}
+    <EditorContent className="max-w-[700px] mx-auto pt-16 prose" editor={editor}
     />
   )
 }
