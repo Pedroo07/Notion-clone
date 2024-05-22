@@ -5,6 +5,7 @@ import { common, createLowlight } from 'lowlight'
 import { RxFontBold, RxFontItalic, RxStrikethrough, RxCode } from 'react-icons/rx'
 const lowlight = createLowlight(common)
 import ts from 'highlight.js/lib/languages/typescript'
+import { initialContent } from './InitialContent'
 
 import 'highlight.js/styles/monokai.css'
 import BubbleButton from './BubbleButton'
@@ -19,7 +20,7 @@ const Main = () => {
                 lowlight,
             }),
         ],
-        content: '<p>Hello World</p>',
+        content: initialContent,
         editorProps: {
             attributes: {
                 class: 'outline-none'
